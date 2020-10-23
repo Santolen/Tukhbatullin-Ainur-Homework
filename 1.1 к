@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	double x, y, h = 0.952, b = -2.5, max = 0, phi = 1;
+	int  n = 10;
+	double a[] = { -3,17.01,8 };
+	for (int i = 0;i < 3;i++)
+	{
+		for (int j = 1;j <= n;j++)
+		{
+			x = b + j * h;
+			y = 0.8 + 2 * sin(x) - 5.5 * sin(a[i])*sin(a[i]);
+			if (abs(y) > abs(max)) { max = y; }
+			phi = phi * y;
+			cout << y << " ";
+		}
+	}
+	cout << " phi = " << abs(phi) << " psi = " << max;
+	return 0;
+	system("pause");
+}
