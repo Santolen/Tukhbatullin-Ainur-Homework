@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+setlocale(LC_ALL, "ru");
+double x, y, h = 0.709, b = 2, min=5, psi = 1;
+int  n = 10;
+double a[] = { -160,0,14 };
+for (int i = 0;i < 3;i++)
+{
+	for (int j = 1;j <= n;j++)
+	{
+		x = b + j * h;
+		y = (1 - 5.7 * cos(a[i] - x)) / (2.6 + cos(a[i] + x) * cos(a[i] + x));
+		if (y < min) { min = y; }
+		psi = psi * y;
+		cout << y << " ";
+	}
+}
+cout << " psi = " << abs(psi) << " phi = " << min;
+	return 0;
+	system("pause");
+}
