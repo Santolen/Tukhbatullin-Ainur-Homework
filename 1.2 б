@@ -10,7 +10,6 @@ int main()
 	double* Z = new double[n];
 	z[0] = -0.50;
 	z[1] = 1.80;
-	cout << z[0] << " " << z[1] << " ";
 	for (int i=2;i<=n;i++)
 	{
 		if (z[i-1] >= 0)
