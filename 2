@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int n,i=2,count=0;
+	cout << "Введите число n : ";
+	cin >> n;
+	for (i;i <= sqrt(n);i++)
+	{
+		if (n % i == 0)
+		{
+			count++;
+		}
+		if (count == 1)
+		{
+			break;
+		}
+	}
+	if (count == 1)
+	{
+		cout << "composite" << endl;
+	}
+	else
+	{
+		cout << "prime" << endl;;
+	}
+	system("pause");
+	return 0;
