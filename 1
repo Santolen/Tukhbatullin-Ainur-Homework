@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int N, a, b, c, d, count = 0;
+	cout << "Введите числа a, b, c, d: ";
+	cin >> a >> b >> c >> d;
+	N = 10000;
+	while (N < 100000)
+	{
+		if (N % a == b && N % c == d)
+		{
+			cout << N << " ";
+			count++;
+		}
+		N++;
+	}
+	if (count == 0)
+	{
+		cout << -1 << " ";
+	}
+	system("pause");
+	return 0;
+}
